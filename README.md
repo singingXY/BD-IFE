@@ -15,3 +15,6 @@
 (https://singingxy.github.io/BD-IFE/%E5%B0%8F%E8%96%87%E5%AD%A6%E9%99%A2/task_1_4_1/index.html)
 
 * [任务五：零基础HTML及CSS编码（二）]
+(https://singingxy.github.io/BD-IFE/%E5%B0%8F%E8%96%87%E5%AD%A6%E9%99%A2/task_1_5_1/index.html)
+
+* [任务六：通过HTML及CSS模拟报纸排版]
