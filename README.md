@@ -9,3 +9,6 @@
 (https://singingxy.github.io/BD-IFE/%E5%B0%8F%E8%96%87%E5%AD%A6%E9%99%A2/task_1_2_1/index.html)
 
 * [任务三：三栏式布局]
+(https://singingxy.github.io/BD-IFE/%E5%B0%8F%E8%96%87%E5%AD%A6%E9%99%A2/task_1_3_1/index.html)
+
+* [任务四：定位和居中问题]
