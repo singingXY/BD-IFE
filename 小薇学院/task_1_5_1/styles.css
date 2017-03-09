@@ -1,0 +1,58 @@
+﻿@charset "utf-8";
+/* CSS Document */
+*{ padding:0; margin:0;}
+body{font-family: "microsoft yahei", "宋体", Arial, Helvetica, sans-serif;background:#dedede;}
+ul li{ list-style:none;}
+ul{overflow: hidden;}
+input,button,select,textarea{outline:none;border: 0;}
+.fl{float: left;}.fr{float: right;}
+.w{margin: 0 20px;}
+
+.top{height: 60px;background: #333;}
+.top img{float: left;}
+.top ul{float: right;font-size: 13px;}
+.top li{float: left;line-height: 60px;width: 80px;text-align: center;}
+.top li a{color: #fff;text-decoration: none;}
+.top li a:hover{color: #999;}
+.top li:last-child a{color: #999;}
+
+.foot{background: #000;color: #fff;text-align: center;padding: 20px 0 36px;font-size: 12px;}
+
+.main{overflow: auto;margin: 0 405px 0 20px;}
+
+.wz{padding:20px; margin:23px 1px;overflow: hidden;
+ background: #fff;border: solid 1px #cdcdcd;
+ -webkit-box-shadow: 1px 1px 1px #888;
+box-shadow: 1px 1px 1px #888;}
+.wz h2{font-weight: bold;font-size: 20px;line-height: 54px;color: #000;}
+.wz h3{font-size:16px;color: #666;line-height: 34px;}
+.wz span{font-size: 12px;line-height: 30px;}
+.wz p{line-height: 26px;font-size: 15px;text-indent: 2em;color: #001;}
+
+.pic ul{margin-left: 30px;}
+.pic li{float: left;width: 100px;padding: 10px;text-align: center;border: solid 1px #cecece;margin:0 20px 16px 0;}
+.pic li img{width: 100%;margin-top: 10px;}
+
+.wz ol{margin: 10px 0;}
+.wz ol li{    margin-left: 36px;
+    color: #000;
+    line-height: 26px;
+}
+
+.wz table{width: 100%;text-align: left;text-indent:.5em;border-right: solid 1px #dcdcdc;}
+.wz table td{height: 24px;font-size: 12px;border-top: solid 1px #dcdcdc;border-left: solid 1px #dcdcdc;color: #000;}
+.wz caption{text-align: left;color: #000;font-size: 15px;}
+.wz th{height: 25px;background: #333;color: #fff;font-weight: bold;font-size: 13px;}
+.wz .zj td{background: #ccc;font-weight: bold;}
+
+.celan{width: 325px;float: right;margin-right: 20px;}
+.celan .line{font-size: 13px;margin-bottom:8px;}
+.celan h4{border-left: solid 3px #cacaca;height: 42px;line-height: 42px;font-size: 16px;color: #000;text-indent: 12px;margin-bottom: 5px;}
+.celan input,select,textarea{border: solid 1px #c3c3c3;}
+.celan input{height: 22px;line-height: 22px;vertical-align: middle;text-indent: .5em;margin-right: 5px;}
+.celan label{display: inline-block;width:100px;margin-right: 14px;text-align: right;font-size: 12px;}
+.celan span{margin-left:120px;display: block;margin-bottom:17px;color: #999;}
+.celan textarea{width:200px;height: 100px;vertical-align: top;font-size: 15px;}
+.celan .tjbtn{width: 100%;height: 40px;line-height: 40px;color: #fff;background: #3355d0;font-size: 16px;border-radius: 8px;}
+
+
