@@ -1,0 +1,37 @@
+﻿@charset "utf-8";
+/* CSS Document */
+*{ padding:0; margin:0;}
+body{padding: 20px;}
+ul li{ list-style:none;}
+
+.warp{
+	overflow: hidden;
+	padding: 20px;
+	background: #eee;
+	border: solid 1px #999;}
+.left{
+	float: left;
+	padding: 20px;
+	width: 160px;
+	background: #fff;
+	border: solid 1px #999;
+	text-align: center;
+}
+.left img{float: left;}
+
+.content{
+	padding: 20px;
+	margin: 0 140px 0 220px; 
+	background: #fff;
+	border: solid 1px #999;
+}
+.content p{margin-bottom: 1em;}
+
+.right{
+	float: right;
+	padding: 20px;
+	width: 80px;
+	background: #fff;
+	border: solid 1px #999;
+}
+.right img{margin-bottom: 10px;}
