@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>任务十：Flexbox 布局练习</title>
+    
+  </head>
+  <body>
+   
+    <style>
+      .warp{
+        border:solid 1px #9d9d9d;
+        padding: 20px;
+        display: flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+      .warp .div{width: 150px;flex: 0 0 auto; margin-bottom: 20px;}
+
+      .div1{height: 120px;border:solid 1px #f00;}
+      .div2{height: 100px;border:solid 1px #f00;}
+      .div3{height: 40px;border:solid 1px #f00;}
+      .div4{height: 200px;border:solid 1px #00f;}
+
+    @media screen and (max-width: 640px) {
+      .warp{
+        align-items:flex-start;
+        flex-wrap: wrap;
+      }
+      .div4{order:-1;}
+    }
+    </style>
+    <div class="warp">
+      <div class="div div1"></div>
+      <div class="div div2"></div>
+      <div class="div div3"></div>
+      <div class="div div4"></div>
+    </div>
+    </body>
+  </html>
+
+
+
+<!-- 
+<style>
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .item {
+      flex: 0 0 auto;
+      width: 150px;
+      border: 1px solid #f00;
+    }
+    .item1 {
+      height: 120px;
+    }
+    .item2 {
+      height: 100px;
+    }
+    .item3 {
+      height: 40px;
+    }
+    .item4 {
+      height: 200px;
+      border-color: #0f0;
+    }
+    @media screen and (max-width: 640px) {
+      .container {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+      .item4 {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item item1">宽度 150px, 高度 120px, 边框颜色 #f00</div>
+    <div class="item item2">宽度 150px, 高度 100px, 边框颜色 #f00</div>
+    <div class="item item3">宽度 150px, 高度 40px, 边框颜色 #f00</div>
+    <div class="item item4">宽度 150px, 高度 200px, 边框颜色 #0f0</div>
+  </div>
+</body>
+</html> -->
