@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>No.1 - 制作一个简单的菜单动画效果</title>
+</head>
+<body>
+<style>
+	body{text-align: center;}
+	h1{margin: 50px auto;line-height: 2;width: 130px}
+	button{padding: 5px 10px; background: #fff; border-radius: 5px;border:solid 1px #ddd; outline: none;font-size: 24px;box-shadow: 0 1px 2px 0 #bbb;}
+	button:active{ box-shadow:inset 0 1px 2px 0 #bbb;}
+	h1.active{color: #3e71ff;}
+	h1:after{
+		content: "";
+		display: block;width: 0;height: 5px;
+		margin: 0 auto;
+		background: #3e71ff;
+		transition: width .2s;
+		-moz-transition: width .2s;	/* Firefox 4 */
+		-webkit-transition: width .2s;	/* Safari 和 Chrome */
+		-o-transition: width .2s;	/* Opera */
+	}
+	h1.active:after{width: 100%;}
+</style>
+
+	<h1 class="ss">前端学院</h1>
+	<button id="btn">切换样式</button>
+
+<script>
+document.getElementById('btn').addEventListener('click', function () {
+	var text =document.querySelector('.ss');
+	if (text.className.indexOf('active')>-1) {
+		text.classList.remove("active");
+	}else{
+		text.classList.add("active");
+	}
+});
+</script>
+</body>
+</html>
