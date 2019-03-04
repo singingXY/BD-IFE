@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>No.2 - 初步接触 CSS 2D 变形</title>
+</head>
+<body>
+<style>
+	body{padding: 27px 0;font-size: 18px;}
+	div{display: inline-block;
+		width: 60px;height: 68px;
+		margin: 0 18px;
+		background: #f7f6f6;border: solid 2px #ebebeb;
+		line-height: 68px;text-align: center;
+	}
+	 /*倾斜*/
+	.box1{transform: skew(30deg,0);}
+	 /*缩放*/
+	.box2{transform: scale(.5,1);}
+	 /*旋转*/
+	.box3{transform: rotate(45deg);}
+	 /*位移*/
+	.box4{transform: translate(10px,20px); }
+	.box5{transform: skew(30deg,0) scale(.5,1) rotate(45deg) translate(10px,20px);}
+</style>
+	<div class="box0">box0</div>
+	<div class="box1">box1</div>
+	<div class="box2">box2</div>
+	<div class="box3">box3</div>
+	<div class="box4">box4</div>
+	<div class="box5">box5</div>
+</body>
+</html>
