@@ -10,3 +10,5 @@
 
 * [No.4 - 3D 空间的卡片翻转动效](https://singingxy.github.io/BD-IFE/%E8%AE%BE%E8%AE%A1%E5%B8%88%E5%AD%A6%E9%99%A2/No.4/index.html)
 
+* [No.5 - 纯 CSS 制作绕中轴旋转的立方体](https://singingxy.github.io/BD-IFE/%E8%AE%BE%E8%AE%A1%E5%B8%88%E5%AD%A6%E9%99%A2/No.5/index.html)
+
