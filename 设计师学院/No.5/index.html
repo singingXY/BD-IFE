@@ -13,10 +13,11 @@
 		perspective:300;-webkit-perspective:300;
 	}
 	.wrap{width: 200px;height:200px;
-		
-		transform-style: preserve-3d;transform-origin:50% 0 -100px;
+		  transform-style: preserve-3d;transform-origin:50% 0 -100px;
+		  animation:rotate 8s infinite linear;
+		  animation-play-state: paused;
 		}
-	.wrap:hover{animation:rotate 8s infinite linear; /*transform:rotateY(360deg);transition: transform 1s;*/}
+	.wrap:hover{ animation-play-state: running;}
 	@keyframes rotate{
 		0%{transform:rotateY(0deg);}
 		50%{transform:rotateY(-180deg);}
