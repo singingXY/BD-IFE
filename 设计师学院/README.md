@@ -13,3 +13,5 @@
 * [No.5 - 纯 CSS 制作绕中轴旋转的立方体](https://singingxy.github.io/BD-IFE/%E8%AE%BE%E8%AE%A1%E5%B8%88%E5%AD%A6%E9%99%A2/No.5/)
 
 * [No.6 - 利用 CSS animation 制作一个炫酷的 Slider](https://singingxy.github.io/BD-IFE/%E8%AE%BE%E8%AE%A1%E5%B8%88%E5%AD%A6%E9%99%A2/No.6/)
+
+* [No.7 - 使用 animate.css 实现一个优雅的登录框](https://singingxy.github.io/BD-IFE/%E8%AE%BE%E8%AE%A1%E5%B8%88%E5%AD%A6%E9%99%A2/No.7/)
