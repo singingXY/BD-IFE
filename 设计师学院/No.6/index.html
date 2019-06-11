@@ -8,25 +8,31 @@
 <style>
 	body{margin: 0;padding: 0;background: #000;}
 	img{border: 0;vertical-align: top;}li{list-style: none;}
-	.pic img{width: 100%;display: none;}
-	.pic .pic1{display: block;}
-	.picli{width: 80%;padding: 0;position: fixed;bottom: 30px;left: 10%;}
+
+	.pic img{width: 100%;position:absolute;top:0;left:0;z-index:0;}
+	.pic #pic1{z-index:1; }
+
+	.picli{width: 80%;padding: 0;position: fixed;bottom:5%;left: 10%;z-index:100;}
 	.picli li{width: 20%;float: left;text-align: center;}
-	.picli li img{width: 95%;}
+	.picli li img{width: 95%;cursor: pointer; filter: brightness(50%);border-radius: 5px;}
+	.picli li img:hover{filter: brightness(100%);}
+
+	.pic img:target{z-index:5;}
+	#pic1:target{}
 </style>
 <div class="pic">
-	<img class="pic1" src="1.jpg" alt="">
-	<img class="pic2" src="2.jpg" alt="">
-	<img class="pic3" src="3.jpg" alt="">
-	<img class="pic4" src="4.jpg" alt="">
-	<img class="pic5" src="5.jpg" alt="">
+	<img id="pic1" src="1.jpg" alt="">
+	<img id="pic2" src="2.jpg" alt="">
+	<img id="pic3" src="3.jpg" alt="">
+	<img id="pic4" src="4.jpg" alt="">
+	<img id="pic5" src="5.jpg" alt="">
 </div>
 <ul class="picli">
-	<li><img src="1.jpg" alt=""></li>
-	<li><img src="2.jpg" alt=""></li>
-	<li><img src="3.jpg" alt=""></li>
-	<li><img src="4.jpg" alt=""></li>
-	<li><img src="5.jpg" alt=""></li>
+	<li><a href="#pic1"><img src="1.jpg" alt=""></a></li>
+	<li><a href="#pic2"><img src="2.jpg" alt=""></a></li>
+	<li><a href="#pic3"><img src="3.jpg" alt=""></a></li>
+	<li><a href="#pic4"><img src="4.jpg" alt=""></a></li>
+	<li><a href="#pic5"><img src="5.jpg" alt=""></a></li>
 </ul>
 </body>
 </html>
