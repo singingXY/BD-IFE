@@ -6,19 +6,38 @@
 </head>
 <body>
 <style>
-	body{margin: 0;padding: 0;background: #000;}
+	body{margin: 0;padding: 0;background: #000;overflow-y: hidden;overflow-x: hidden;}
 	img{border: 0;vertical-align: top;}li{list-style: none;}
+	.pic{height: 100%;width: 100%;}
+	.pic img{width: 100%;position:absolute;top:0;left:0;}
 
-	.pic img{width: 100%;position:absolute;top:0;left:0;z-index:0;}
-	.pic #pic1{z-index:1; }
-
-	.picli{width: 80%;padding: 0;position: fixed;bottom:5%;left: 10%;z-index:100;}
+	.picli{width: 80%;padding: 0;position:fixed;bottom:5%;left: 10%;z-index:100;}
 	.picli li{width: 20%;float: left;text-align: center;}
-	.picli li img{width: 95%;cursor: pointer; filter: brightness(50%);border-radius: 5px;}
+	.picli li img{cursor: pointer;width: 95%;border-radius: 5px; filter: brightness(50%);}
 	.picli li img:hover{filter: brightness(100%);}
 
-	.pic img:target{z-index:5;}
-	#pic1:target{}
+	#pic2{/* z-index:9; */} 
+	.pic img:target{z-index:20;}
+
+	#pic1:target{animation:pic1 .5s ease-out;}
+	@keyframes pic1{from {left:-500px;}to {left:0;}}
+
+	#pic2:target{animation:pic2 .5s ease-out;}
+	@keyframes pic2{from {top:350px;}to {top:0;}}
+
+	#pic3:target{animation:pic3 1s ease-in;}
+	@keyframes pic3{from {transform:scale(.1);}to {transform:scale(1);}}
+
+	#pic4:target{animation:pic4 1s ease-out;}
+	@keyframes pic4{from {transform:scale(2);}to {transform:scale(1);}}
+
+	#pic5:target{animation:pic5 .7s ease-in-out;}
+	@keyframes pic5{from {transform:scale(.1) rotate(-360deg);}to {transform:scale(1) rotate(0deg);}}
+
+	.pic img:not(:target){
+            animation: ontarget 1s ;
+        }
+    @keyframes ontarget{0% {z-index: 10;}100% {z-index: 10;}}
 </style>
 <div class="pic">
 	<img id="pic1" src="1.jpg" alt="">
