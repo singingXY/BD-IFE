@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>No.6 - 利用 CSS animation 制作一个炫酷的 Slider</title>
+</head>
+<body>
+<style>
+	body{margin: 0;padding: 0;background: #000;}
+	img{border: 0;vertical-align: top;}li{list-style: none;}
+	.pic img{width: 100%;display: none;}
+	.pic .pic1{display: block;}
+	.picli{width: 80%;padding: 0;position: fixed;bottom: 30px;left: 10%;}
+	.picli li{width: 20%;float: left;text-align: center;}
+	.picli li img{width: 95%;}
+</style>
+<div class="pic">
+	<img class="pic1" src="1.jpg" alt="">
+	<img class="pic2" src="2.jpg" alt="">
+	<img class="pic3" src="3.jpg" alt="">
+	<img class="pic4" src="4.jpg" alt="">
+	<img class="pic5" src="5.jpg" alt="">
+</div>
+<ul class="picli">
+	<li><img src="1.jpg" alt=""></li>
+	<li><img src="2.jpg" alt=""></li>
+	<li><img src="3.jpg" alt=""></li>
+	<li><img src="4.jpg" alt=""></li>
+	<li><img src="5.jpg" alt=""></li>
+</ul>
+</body>
+</html>
