@@ -4,6 +4,7 @@
     <head>
         <meta http-equiv="content-type" content="text/html;charset=utf-8">
         <title>使用 animate.css 制作流畅交互动效</title>
+        <link rel="stylesheet" href="animate.css">
         <style type="text/css">
             html {
                 font-size: 62.5%;
@@ -72,23 +73,31 @@
             .form__input:focus {
                 background-position: 0 0;
                 color: #444;
+                
             }
             .form__label {
                 position: absolute;
                 bottom: 0;
                 left: 0;
                 padding: 0;
-                width: 100%;
+                width: 0;
                 height: calc(99%);
                 text-align: left;
                 pointer-events: none;
                 color: #999;
+
+                box-sizing: border-box;
+                transition:width .3s;
             }
+
             .form__label__content {
                 position: absolute;
+                transition: .3s ease-out;
             }
-            .form__input:focus ~ .form__label .form__label-content,
+            .form__input:focus ~.form__label .form__label__content,
             .form--filled .form__label-content {
+                top: -10px;
+                font-size: .9em;
             }
             .btn {
                 width: 100%;
@@ -139,4 +148,25 @@
         </section>
     </body>
     <script src="https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js"></script>
+    <script>
+    var inp =$(".form__input");
+        inp.focus(function(){
+            $(this).siblings(".form__label").css({"width":"100%","border-bottom":"solid 2px #1e8bf0"});
+            $(this).siblings(".form__label").children(".form__label__content").css({"top":"-10px","font-size":".9em"});
+        });
+        inp.blur(function(){
+            $(".form__label").css({"width":"0"});
+            if($(this).val()){
+                //非空时label维持上移
+                $(this).siblings(".form__label").children(".form__label__content").css({"top":"-10px","font-size":".9em"});
+            }else{
+                //空时label恢复原样
+                $(this).siblings(".form__label").children(".form__label__content").css({"top":"0","font-size":"1em"});
+            }
+            if($('#email').val()!=="" && $('#password').val()!==""){
+                $(".btn").addClass("animated infinite pulse");
+            }
+        })
+
+    </script>
 </html>
