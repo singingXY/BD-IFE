@@ -15,3 +15,5 @@
 * [No.6 - 利用 CSS animation 制作一个炫酷的 Slider](https://singingxy.github.io/BD-IFE/%E8%AE%BE%E8%AE%A1%E5%B8%88%E5%AD%A6%E9%99%A2/No.6/)
 
 * [No.7 - 使用 animate.css 实现一个优雅的登录框](https://singingxy.github.io/BD-IFE/%E8%AE%BE%E8%AE%A1%E5%B8%88%E5%AD%A6%E9%99%A2/No.7/)
+
+* [No.8 - 把 AE 动画转换成 Web 原生动画](https://singingxy.github.io/BD-IFE/%E8%AE%BE%E8%AE%A1%E5%B8%88%E5%AD%A6%E9%99%A2/No.8/)
