@@ -1,15 +1,13 @@
 <template>
     <div>
-        <div 
-            class="div0 {{changeColor ? 'red' : 'blue'}}" 
-            on-click="toggle" >
-            class方式<br>点击变色
+        <button on-click="toggle">点击变色</button>
+        <div class="div0 {{changeColor ? 'red' : 'blue'}}" >
+            class方式
         </div>
-        <div class="div0"
-            style="color ? 'background:' + color : ''"
-            on-click="itemClick(index)">
-            style方式<br>点击变色
+        <div class="div0" style="background: {{changeColor ? 'red' : 'blue'}}">
+            style方式
         </div>
+
     </div>
 </template>
 
@@ -29,6 +27,7 @@
 
 <style>
     .div0 {
+        float:left;
         color:#fff;
         width:100px;
         height:100px;
@@ -37,4 +36,8 @@
     }
     .blue{background:blue;}
     .red{background:red;}
+    button{
+        display:block;
+        margin:20px;
+    }
 </style>
