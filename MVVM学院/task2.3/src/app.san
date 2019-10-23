@@ -1,0 +1,40 @@
+<template>
+    <div>
+        <div 
+            class="div0 {{changeColor ? 'red' : 'blue'}}" 
+            on-click="toggle" >
+            class方式<br>点击变色
+        </div>
+        <div class="div0"
+            style="color ? 'background:' + color : ''"
+            on-click="itemClick(index)">
+            style方式<br>点击变色
+        </div>
+    </div>
+</template>
+
+<script>
+    export default {
+        initData () {
+            return {
+                changeColor: true
+            };
+        },
+        toggle: function () {
+            var changeColor = this.data.get('changeColor');
+            this.data.set('changeColor', !changeColor);
+        }
+    }
+</script>
+
+<style>
+    .div0 {
+        color:#fff;
+        width:100px;
+        height:100px;
+        text-align:center;
+        margin:20px;
+    }
+    .blue{background:blue;}
+    .red{background:red;}
+</style>
