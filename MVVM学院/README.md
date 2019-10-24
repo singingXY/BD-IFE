@@ -10,6 +10,6 @@
 
 * [2.3 样式控制](https://singingxy.github.io/BD-IFE/MVVM%E5%AD%A6%E9%99%A2/task2.3/dist/)
 
-* [2.4 事件处理]()
+* [2.4 事件处理](https://singingxy.github.io/BD-IFE/MVVM%E5%AD%A6%E9%99%A2/task2.4/dist/)
 
-* []()
+* [2.5]()
