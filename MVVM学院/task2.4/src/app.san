@@ -1,0 +1,32 @@
+<template>
+    <div>
+        <child msgtext="{{ msg }}"></child>
+        <p class="top">更高层的父组件：{{ msg }}</p>
+    </div>
+</template>
+
+<script>
+import child from './child.san'
+export default {
+    initData () {
+        return {
+            msg: "我也静静的等待用户输入"
+        };
+    },
+    components: {
+        "child": child
+    },
+    // 处理子组件派发的消息
+    messages: {
+        "UI:alerts": function (arg) {
+            this.data.set("msg", arg.value);
+        }
+    }
+}
+</script>
+
+<style>
+body{margin:20px;font-size: 22px;line-height: 2.5;}
+.upper {color: #3F51B5}
+.top {color:#e91e63}
+</style>

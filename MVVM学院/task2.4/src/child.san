@@ -1,0 +1,22 @@
+<template>
+    <div>
+        <childchild on-customclick="customClicker" input="{{ msgtext }}"></childchild>
+        <p class="upper">父组件：{{ msgtext }}</p>
+    </div>
+</template>
+
+<script>
+import childchild from './childchild.san'
+export default {
+    components: {
+        "childchild": childchild
+    },
+    // 初始化生命周期钩子,因为msgtext由该组件的上一级传递而来,所以自带的initData()不能初始化这个值,要用要利用set方法重新赋值
+    inited: function () {
+        this.data.set("msgtext", "我静静的等待用户输入");
+    },
+    submitClicker: function (arg) {
+        this.data.set("msgtext", arg);
+    }
+}
+</script>

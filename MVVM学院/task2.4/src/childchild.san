@@ -1,0 +1,22 @@
+<template>
+    <div>
+        <label>子组件：<input type="text" value="{= input =}"></label>
+        <input type="button" value="通知父组件" on-click="message">
+    </div>
+</template>
+
+<script>
+export default {
+    // 初始化生命周期钩子,因其值由该组件的上一级传递而来,所以自带的initData()不能初始化这个值,要用要利用set方法重新赋值
+    inited: function () {
+        this.data.set("input", "");
+    },
+    // button点击事件触发的函数,向父组件派发一个自定义事件,同时派发一个消息交给更高层组件处理
+    message: function () {
+        let value = this.data.get("input");
+        this.fire("customclick", value)
+        // dispatch方法，派发消息
+        this.dispatch('UI:alerts', value);
+    }
+}
+</script>
