@@ -1,7 +1,9 @@
 <template>
     <div>
         <child msgtext="{{ msg }}"></child>
-        <p class="top">更高层的父组件：{{ msg }}</p>
+        <label class="fafa">我是更高层的父组件：
+            <input type="text" value="{= msg =}">
+        </label>
     </div>
 </template>
 
@@ -10,7 +12,7 @@ import child from './child.san'
 export default {
     initData () {
         return {
-            msg: "我也静静的等待用户输入"
+            msg: "我也静静等待用户输入"
         };
     },
     components: {
@@ -27,6 +29,8 @@ export default {
 
 <style>
 body{margin:20px;font-size: 22px;line-height: 2.5;}
-.upper {color: #3F51B5}
-.top {color:#e91e63}
+.fa input,
+.fafa input{border:0;outline:0;font-size: 22px;}
+.fa, .fa input{color: #3F51B5}
+.fafa,.fafa input {color:#e91e63}
 </style>
