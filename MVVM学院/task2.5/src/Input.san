@@ -1,0 +1,67 @@
+<template>
+    <div class="input">
+        <input 
+            value="{{ value }}"
+            placeholder="{{ placeholder }}"
+            disabled="{{ disabled }}" 
+            readonly="{{ readonly }}"
+            on-input="onInput($event)"
+            on-focus="onFocus($event)"
+            on-blur="onBlur($event)"
+
+             />
+    </div>
+</template>
+
+<script>
+export default {
+    initData() {
+        return {
+            value: undefined, // @value, type:string, default:undefined
+            placeholder: undefined, // @placeholder, type:string, default:undefined
+            disabled: false, // @disabled, type:boolean, default:false
+            readonly: false // @readonly, type:boolean, default:false
+        }
+    },
+    onInput(event){
+        // return event
+      this.fire('input', event);
+    },
+    onFocus(event){
+        // return event
+      this.fire('focus', event);
+    },
+    onBlur(event){
+        // return event
+      this.fire('blur', event);
+    },
+}
+</script>
+
+<style scoped>
+input{
+    box-sizing: border-box;
+    width: 100%;
+    display: inline-block;
+    padding:8px;
+    color: #666;
+    font-size: 1rem;
+    border:solid 1px #dbdbdb;
+}
+input:hover{
+    border:solid 1px #999;
+}
+input:focus{
+    border:solid 1px #999;
+    color: #727272;
+    outline:none;
+}
+input::placeholder {
+color: #999;
+}
+
+input:disabled {
+background: #f7f7f7;
+color:#b8b8b8
+}
+</style>

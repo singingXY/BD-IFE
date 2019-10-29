@@ -1,0 +1,25 @@
+<template>
+    <div>
+        <san-input
+            placeholder="请输入用户名"
+            value="" disabled>
+        </san-input>
+    </div>
+</template>
+
+<script>
+import sanInput from './Input.san'
+export default {
+    initData () {
+        return {}
+    },
+    components: {
+        "san-input": sanInput
+    }
+}
+</script>
+
+<style>
+body{margin:20px;font-size: 22px;line-height: 2.5;}
+
+</style>
