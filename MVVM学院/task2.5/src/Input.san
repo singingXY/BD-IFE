@@ -1,6 +1,7 @@
 <template>
     <div class="input">
         <input 
+            class="{{ errorMsg ? 'error' : ''}}"
             value="{{ value }}"
             placeholder="{{ placeholder }}"
             disabled="{{ disabled }}" 
@@ -8,8 +9,10 @@
             on-input="onInput($event)"
             on-focus="onFocus($event)"
             on-blur="onBlur($event)"
-
              />
+        <span s-if="error-right" class="error-right">{{ errorMsg }}</span>
+        <span s-if="error-bottom" class="error-bottom">{{ errorMsg }}</span>
+        <span s-if="error-alert" class="error-alert">{{ errorMsg }}</span>
     </div>
 </template>
 
@@ -20,7 +23,8 @@ export default {
             value: undefined, // @value, type:string, default:undefined
             placeholder: undefined, // @placeholder, type:string, default:undefined
             disabled: false, // @disabled, type:boolean, default:false
-            readonly: false // @readonly, type:boolean, default:false
+            readonly: false, // @readonly, type:boolean, default:false
+            errorMsg: undefined // @errorMsg, type:string, default:undefined
         }
     },
     onInput(event){
@@ -63,5 +67,8 @@ color: #999;
 input:disabled {
 background: #f7f7f7;
 color:#b8b8b8
+}
+input.error{
+    border:solid 1px #fb5d5f;
 }
 </style>

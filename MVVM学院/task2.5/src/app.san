@@ -1,9 +1,21 @@
 <template>
     <div>
+        输入框Input
+        <san-input placeholder="请输入" value="{{value}}"/>
+        <san-input placeholder="禁用" disabled />
+        <san-input value="只读区域" readonly />
         <san-input
-            placeholder="请输入用户名"
-            value="" disabled>
+            placeholder="带事件触发"
+            value=""
+            on-input="onInput"
+            on-focus="onFocus"
+            on-blur="onBlur">
         </san-input>
+        
+        <san-input placeholder="请输入" error-right="错误提示文案" />
+        <san-input placeholder="请输入" error-bottom="错误提示文案" />
+        <san-input placeholder="请输入" error-alert="错误提示文案" />
+
     </div>
 </template>
 
@@ -15,6 +27,15 @@ export default {
     },
     components: {
         "san-input": sanInput
+    },
+    onInput(msg){
+        console.log(msg)
+    },
+    onFocus(msg){
+        console.log(msg)
+    },
+    onBlur(msg){
+        console.log(msg)
     }
 }
 </script>
