@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="warp">
         输入框Input
         <san-input placeholder="请输入" value="{{value}}"/>
         <san-input placeholder="禁用" disabled />
@@ -42,5 +42,5 @@ export default {
 
 <style>
 body{margin:20px;font-size: 22px;line-height: 2.5;}
-
+.warp{width:200px}
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div class="input">
         <input 
-            class="{{ errorMsg ? 'error' : ''}}"
+            class="{{ error ? 'error' : ''}}"
             value="{{ value }}"
             placeholder="{{ placeholder }}"
             disabled="{{ disabled }}" 
@@ -24,7 +24,8 @@ export default {
             placeholder: undefined, // @placeholder, type:string, default:undefined
             disabled: false, // @disabled, type:boolean, default:false
             readonly: false, // @readonly, type:boolean, default:false
-            errorMsg: undefined // @errorMsg, type:string, default:undefined
+            errorMsg: undefined, // @errorMsg, type:string, default:undefined
+            error:false // @ error, type:boolean, default:false
         }
     },
     onInput(event){
@@ -38,6 +39,10 @@ export default {
     onBlur(event){
         // return event
       this.fire('blur', event);
+      if (this.data.get('value') === "" || this.data.get('value') === undefined) {
+          this.data.set('error', true);
+          return;
+      }
     },
 }
 </script>
