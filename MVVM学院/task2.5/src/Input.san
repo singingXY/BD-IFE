@@ -2,7 +2,7 @@
     <div class="input">
         <input 
             class="{{ error ? 'error' : ''}}"
-            value="{{ value }}"
+            value="{= value =}"
             placeholder="{{ placeholder }}"
             disabled="{{ disabled }}" 
             readonly="{{ readonly }}"
@@ -10,9 +10,7 @@
             on-focus="onFocus($event)"
             on-blur="onBlur($event)"
              />
-        <span s-if="error-right" class="error-right">{{ errorMsg }}</span>
-        <span s-if="error-bottom" class="error-bottom">{{ errorMsg }}</span>
-        <span s-if="error-alert" class="error-alert">{{ errorMsg }}</span>
+        <span s-if="{{ error }}" class="{{ errorStyle }}">{{ errorMsg }}</span>
     </div>
 </template>
 
@@ -31,6 +29,9 @@ export default {
     onInput(event){
         // return event
       this.fire('input', event);
+      if (this.data.get('value')) {
+          this.data.set('error', false);
+      }
     },
     onFocus(event){
         // return event
@@ -39,9 +40,9 @@ export default {
     onBlur(event){
         // return event
       this.fire('blur', event);
+        console.log(this.data.get('value'))
       if (this.data.get('value') === "" || this.data.get('value') === undefined) {
           this.data.set('error', true);
-          return;
       }
     },
 }
