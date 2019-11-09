@@ -1,49 +1,60 @@
 <template>
     <div>
+    
         <div class="warp title ">
-            <h2>输入框</h2>
+            <h2>输入框<p><span>控件</span><br>Input</p></h2>
             <p>输入框</p>
         </div>
-        <h3 class="warp">基础状态</h3>
-        <div class="warp flex">
-            <div>
-                <div class="item">
-                    <san-input placeholder="请输入" value="{{value}}"/>
-                    <p>常态</p>
+        <div class="warp">
+            <h3 class="title2">基础状态</h3>
+            <div class="flex">
+                <div>
+                    <div class="item">
+                        <san-input placeholder="请输入" value="{{value}}"/>
+                        <p>常态</p>
+                    </div>
+                    <div class="item">
+                        <san-input
+                            placeholder="带事件触发"
+                            value=""
+                            on-input="onInput"
+                            on-focus="onFocus"
+                            on-blur="onBlur">
+                        </san-input>
+                        <p>点击输入</p>
+                    </div>
+                    <div class="item">
+                        <san-input value="只读区域" readonly />
+                        <p>失焦状态</p>
+                    </div>
+                    <div class="item">
+                        <san-input placeholder="禁用" disabled />
+                        <p>不可用</p>
+                    </div>
                 </div>
-                <div class="item">
-                    <san-input
-                        placeholder="带事件触发"
-                        value=""
-                        on-input="onInput"
-                        on-focus="onFocus"
-                        on-blur="onBlur">
-                    </san-input>
-                    <p>点击输入</p>
-                </div>
-                <div class="item">
-                    <san-input value="只读区域" readonly />
-                    <p>失焦状态</p>
-                </div>
-                <div class="item">
-                    <san-input placeholder="禁用" disabled />
-                    <p>不可用</p>
+                <div>
+                    <div class="item">
+                        <san-input placeholder="请输入"
+                        errorMsg="错误提示文案" errorStyle="eright" error/>
+                    </div>
+                    <div class="item">
+                        <san-input placeholder="请输入"
+                        errorMsg="错误提示文案" errorStyle="ebottom" error/>
+                    </div>
+                    <div class="item" style="padding-top:66px;">
+                        <san-input placeholder="请输入"
+                        errorMsg="错误提示文案" errorStyle="etop" error/>
+                    </div>
                 </div>
             </div>
-            <div>
-                <div class="item">
-                    <san-input placeholder="请输入"
-                    errorMsg="错误提示文案" errorStyle="eright" error/>
-                </div>
-                <div class="item">
-                    <san-input placeholder="请输入"
-                    errorMsg="错误提示文案" errorStyle="ebottom" error/>
-                </div>
-                <div class="item">
-                    <san-input placeholder="请输入"
-                    errorMsg="错误提示文案" errorStyle="etop" error/>
-                </div>
-            </div>
+        
+        </div>
+        <div class="warp title ">
+            <h2>复选框<p><span>控件</span><br>Check Box</p></h2>
+            <p>复选框（Check Box）用于在两个或两个以上有清晰差别的选项中进行选择。复选框的标签是对选中状态的描述，而清除状态的含义必须与选中状态明确相反。因此，复选框应当仅用于切换选项的开关状态，或者是选中/取消选中一个项目。</p>
+        </div>
+        <div class="warp">
+            <h3 class="title2">基础形态、状态</h3>
         </div>
     </div>
 </template>
@@ -70,9 +81,29 @@ export default {
 </script>
 
 <style>
-body{margin:0;font-size: 16px;line-height: 1;}
+body{margin:0;font-size: 16px;line-height: 1;font-family:"Microsoft YaHei"}
 .warp{padding:0 50px;}
 .title{overflow: hidden;height:200px;background: #333;color:#999;}
+.title h2{
+    font-size:36px;color:#fff;font-weight: normal;letter-spacing: 3px;
+    /*font-family:Microsoft JhengHei*/}
+.title h2>p{
+    display: inline-block;margin-left:10px;
+    font-size:10px;color:#999;letter-spacing:normal
+    }
+.title h2>p>span{
+    display: inline-block;margin-bottom:2px;
+    width:30px;height:16px;line-height:16px;
+    text-align:center;
+    background: #666;color:#333;
+}
+.title>p{line-height:1.5;}
+.title2{
+    padding-left:10px;
+    border-left:solid 5px #333; 
+    color:#333;
+    font-size:23px;font-family:Microsoft JhengHei;
+    }
 .flex,.item{display:flex;}
 .item{width:400px;height: 36px;line-height:36px;margin-bottom:30px;}
 .item .input{width:70%;}

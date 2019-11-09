@@ -10,7 +10,7 @@
             on-focus="onFocus($event)"
             on-blur="onBlur($event)"
              />
-        <span s-if="{{ error }}" class="{{ errorStyle }}">{{ errorMsg }}</span>
+        <span s-if="{{ error }}" class="{{ errorStyle }} etext">{{ errorMsg }}</span>
     </div>
 </template>
 
@@ -76,5 +76,26 @@ color:#b8b8b8
 }
 input.error{
     border:solid 1px #fb5d5f;
+}
+.input{position: relative;}
+.etext{
+    color:#fb5d5f;white-space: nowrap;font-size:.9rem;padding-left:8px;
+    position: absolute;left: 0;}
+.eright{left: 100%;padding-left:12px;}
+.ebottom{top:42px; line-height:1}
+.etop{
+    display:inline-block;
+    top:-45px;
+    padding:0 15px;
+    height:35px;line-height:35px;
+    background:#ffefef;
+    }
+.etop::after{
+    content:'';
+    position:absolute;
+    top: 35px;left: 50%;
+    width:0;height:0;
+    border-width:5px;border-style:solid;
+    border-color: #ffefef transparent transparent transparent;
 }
 </style>
