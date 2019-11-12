@@ -55,18 +55,39 @@
         </div>
         <div class="warp">
             <h3 class="title2">基础形态、状态</h3>
+            <div class="flex">
+                <san-checkbox id="12"
+                    checked="{=checked=}">
+                    <p>常态</p>
+                </san-checkbox>
+
+                <san-checkbox id="13"
+                    on-change="handleChange"
+                ><p>hover</p></san-checkbox>
+
+                <san-checkbox id="14" checked
+                ><p>选中</p></san-checkbox>
+
+                <san-checkbox id="15" disabled
+                ><p>无效</p></san-checkbox>
+
+                <san-checkbox id="16" checked disabled
+                ><p>必选</p></san-checkbox>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
 import sanInput from './Input.san'
+import sanCheck from './Check.san'
 export default {
     initData () {
         return {}
     },
     components: {
-        "san-input": sanInput
+        "san-input": sanInput,
+        "san-checkbox": sanCheck
     },
     onInput(msg){
         console.log(msg)
@@ -76,12 +97,15 @@ export default {
     },
     onBlur(msg){
         console.log(msg)
+    },
+    handleChange(msg){
+        console.log(msg)
     }
 }
 </script>
 
 <style>
-body{margin:0;font-size: 16px;line-height: 1;font-family:"Microsoft YaHei"}
+body{margin:0;font-size: 16px;line-height: 1;font-family:"Microsoft YaHei";padding-bottom:100px;}
 .warp{padding:0 50px;}
 .title{overflow: hidden;height:200px;background: #333;color:#999;}
 .title h2{
@@ -108,4 +132,6 @@ body{margin:0;font-size: 16px;line-height: 1;font-family:"Microsoft YaHei"}
 .item{width:400px;height: 36px;line-height:36px;margin-bottom:30px;}
 .item .input{width:70%;}
 .item>p{margin:0 0 0 30px; color:#666;font-size: 14px;}
+.checks{text-align:center;margin:0 20px;}
+.checks p{color:#999;}
 </style>

@@ -37,6 +37,13 @@ module.exports = {
         ]
       },
       {
+        test: /\.svg/,
+        use: {
+          loader: 'svg-url-loader',
+          options: {}
+        }
+      },
+      {
         test: /.san$/,
         use: {
           loader: 'san-loader'
