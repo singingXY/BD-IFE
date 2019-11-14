@@ -58,19 +58,28 @@
             <div class="flex">
                 <san-checkbox id="11"
                 ><p>常态</p></san-checkbox>
-
                 <san-checkbox id="12"
                     on-change="handleChange"
                 ><p>hover</p></san-checkbox>
-
                 <san-checkbox id="13" checked
                 ><p>选中</p></san-checkbox>
-
-                <san-checkbox id="14" disabled
+                <san-checkbox id="14"  indeterminate>
+                    <p>部分选中</p>
+                    <div class="flex">
+                        <san-checkbox id="21"
+                        ><p>常态</p></san-checkbox>
+                        <san-checkbox id="22"
+                        ><p>hover</p></san-checkbox>
+                        <san-checkbox id="23" checked
+                        ><p>选中</p></san-checkbox>
+                    </div>
+                </san-checkbox>
+                <san-checkbox id="15" disabled
                 ><p>无效</p></san-checkbox>
-
-                <san-checkbox id="15" checked disabled
+                <san-checkbox id="16" checked disabled
                 ><p>必选</p></san-checkbox>
+                <san-checkbox id="17"disabled indeterminate
+                ><p>必选部分</p></san-checkbox>
             </div>
         </div>
     </div>
@@ -130,6 +139,6 @@ body{margin:0;font-size: 16px;line-height: 1;font-family:"Microsoft YaHei";paddi
 .item{width:400px;height: 36px;line-height:36px;margin-bottom:30px;}
 .item .input{width:70%;}
 .item>p{margin:0 0 0 30px; color:#666;font-size: 14px;}
-.checks{text-align:center;margin:0 20px;}
+.checks{text-align:center;width:80px;}
 .checks p{color:#999;}
 </style>
