@@ -16,6 +16,7 @@
                     <div class="item">
                         <san-input
                             placeholder="带事件触发"
+                            
                             value=""
                             on-input="onInput"
                             on-focus="onFocus"
