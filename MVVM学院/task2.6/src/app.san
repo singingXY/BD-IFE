@@ -1,0 +1,34 @@
+<template>
+    <div>
+        
+        <h1>任务栏</h1>
+        <task-menu>
+            <div slot="title"><p>test</p> {{test}} <p>test</p></div>
+        </task-menu>
+        
+        <task-menu title="{{test}}"></task-menu>
+    </div>
+</template>
+
+<script>
+
+import TaskMenu from "./menu.san";
+export default {
+    components: {
+        "task-menu": TaskMenu
+    },
+    initData () {
+        return {}
+    },
+}
+</script>
+
+<style>
+body{margin:0;font-family:"Microsoft YaHei";}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+}
+</style>

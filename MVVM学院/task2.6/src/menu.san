@@ -1,0 +1,19 @@
+<template>
+    <div class="task-menu" s-for="item,index in datasource" >
+        <div class="task-menu-body">
+            <h2 class="taskTitle">
+                <slot name="taskTitle">{{ taskTitle + (index + 1) }}</slot>
+            </h2>
+            <div class="paster">
+                <h2 class="paster-title">
+                  <slot name="paster-title-name">标题</slot>
+                  :<slot name="title" var-title="item.title">{{ title }}</slot>
+                </h2>
+                <p s-for="menu in item.datasource" class="paster-{{ menu.type }}" >
+                  <slot name="paster-{{ menu.type }}-name" var-menu="menu">{{ menu.name }}</slot>
+                  ：<slot name="{{ menu.type }}" var-menu="menu">{{ menu.content }}</slot>
+                </p>
+            </div>
+        </div>
+    </div>
+</template>
