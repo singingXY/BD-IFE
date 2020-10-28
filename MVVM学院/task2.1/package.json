@@ -1,6 +1,6 @@
 {
   "name": "task1.2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "hello world",
   "main": "index.js",
   "scripts": {
@@ -18,6 +18,6 @@
     "cssnano": "^4.1.10"
   },
   "dependencies": {
-    "san": "^3.7.9"
+    "san": "^3.9.5"
   }
 }
