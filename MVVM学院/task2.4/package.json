@@ -23,7 +23,7 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "san": "^3.7.9",
+    "san": "^3.9.5",
     "san-loader": "0.0.7"
   }
 }
